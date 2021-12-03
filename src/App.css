@@ -92,6 +92,13 @@ ul li a:hover {
     height: 120px;
 }
 
+.imageDesignOrder {
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    background-color: #dedede;
+    height: 20px;
+}
+
 .restName {
     color: #000000 !important;
     font-size: 1.8em !important;
@@ -204,6 +211,10 @@ ul li a:hover {
     width: 100%;
 }
 
+.width-90 {
+    width: 90%;
+}
+
 .marginTop {
     margin-top: 3% !important;
 }
@@ -220,4 +231,37 @@ ul li a:hover {
 
 .marginDiv {
     margin-top: 8%;
+}
+
+.greyBg {
+    background-color: #dedede;
+}
+
+.gridItemLevel {
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    padding: 2%;
+}
+
+.fontsizeOrder {
+    font-size: 1.2em;
+}
+
+.colorRed {
+    color: red;
+}
+
+.signupSignIn {
+    border: 1px solid #dedede;
+    border-radius: 10px;
+}
+
+.alignMentCenter {
+    text-align: center;
+}
+
+.divField {
+    padding: 2% 0% 2% 2%;
+    width: 95%;
+    text-align: center;
 }

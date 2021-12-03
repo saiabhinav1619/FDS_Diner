@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Button } from "@mui/material";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { cookies } from "../../../utils/utils";
 
 const ItemsPage = () => {
     const [checkOutObj,setCheckOutObj] = useState({});
     const [tableNo,setTableNo] = useState("");
-    let orderValue = {}
+    let orderValue = {};
+    const history = useNavigate();
+
+    useEffect(()=>{
+        if(cookies.get("login") !== "true"){
+            history('/');
+          }
+    },[])
   const [items, setItems] = useState({
     menuBar: ["snacks", "mainCourse", "deserts"],
     snacks: [
@@ -141,7 +150,7 @@ const ItemsPage = () => {
         toast.error("Please take the order.")
       }else{
         if(tableNo){
-            
+            history('/order/1');
         }else{
             toast.error("Please enter table number.")
         }
